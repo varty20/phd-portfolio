@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "../components/ThemeProvider";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Script from "next/script"; // <-- THE OFFICIAL NEXT.JS SCRIPT LOADER
+import FloatingAIChat from "../components/FloatingAIChat"; // <-- Brought this back!
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,11 +21,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <Navbar />
           <main className="flex-grow">{children}</main>
           <Footer />
+          <FloatingAIChat />
         </ThemeProvider>
-
-        {/* BULLETPROOF BOTPRESS INJECTION */}
-        <Script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js" strategy="afterInteractive" />
-        <Script src="https://mediafiles.botpress.cloud/9c45df8f-bcea-4fdd-b5cb-94acb26a1e64/webchat/config.js" strategy="afterInteractive" />
       </body>
     </html>
   );
