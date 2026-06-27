@@ -4,7 +4,6 @@ import "./globals.css";
 import { ThemeProvider } from "../components/ThemeProvider";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import "../lib/i18n";
 import Script from "next/script"; // <-- THE OFFICIAL NEXT.JS SCRIPT LOADER
 
 const inter = Inter({ subsets: ["latin"] });
